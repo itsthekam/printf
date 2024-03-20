@@ -6,7 +6,7 @@
 /*   By: kel-malt <kel-malt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 13:58:11 by kel-malt          #+#    #+#             */
-/*   Updated: 2024/03/15 16:58:59 by kel-malt         ###   ########.fr       */
+/*   Updated: 2024/03/20 13:33:44 by kel-malt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@ int	ft_printf(const char *format, ...)
 	va_list	args;
 	int		i;
 	int		len;
+	int		format_len;
 
+	format_len = ft_strlen(format);
 	va_start(args, format);
 	i = 0;
 	len = 0;
-	while (format[i])
+	while (i < format_len)
 	{
 		if (format[i] != '%')
 		{
