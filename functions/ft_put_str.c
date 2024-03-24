@@ -6,7 +6,7 @@
 /*   By: kel-malt <kel-malt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 12:36:20 by kel-malt          #+#    #+#             */
-/*   Updated: 2024/03/20 13:36:43 by kel-malt         ###   ########.fr       */
+/*   Updated: 2024/03/21 11:52:18 by kel-malt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	ft_put_str(char *content, int *len)
 	else
 	{
 		while (content[i])
-		ft_put_char(content[i++], len);
+			ft_put_char (content[i++], len);
 	}
 }

@@ -6,7 +6,7 @@
 #    By: kel-malt <kel-malt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/19 12:31:43 by kel-malt          #+#    #+#              #
-#    Updated: 2024/02/19 13:02:03 by kel-malt         ###   ########.fr        #
+#    Updated: 2024/03/24 17:58:56 by kel-malt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ FUNCTIONS		= $(addprefix $(FUNCTIONS_PATH), ft_put_char.c ft_put_dec.c \
 SURPL_O		= ft_put_char.o ft_put_dec.o ft_put_hex_lower.o  ft_put_hex_upper.o \
 				ft_put_ptr.o ft_put_str.o ft_put_unsignedint.o
 
-CC = gcc
+CC = cc
 
 FLAGS = -c -Wall -Wextra -Werror
 

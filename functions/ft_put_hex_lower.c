@@ -6,13 +6,13 @@
 /*   By: kel-malt <kel-malt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 12:36:12 by kel-malt          #+#    #+#             */
-/*   Updated: 2024/02/19 12:59:08 by kel-malt         ###   ########.fr       */
+/*   Updated: 2024/03/21 13:20:04 by kel-malt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-void	ft_put_hex_lower(unsigned int content, int *len)
+void	ft_put_hex_lower(unsigned long content, int *len)
 {
 	if (content >= 16)
 	{

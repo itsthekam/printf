@@ -6,7 +6,7 @@
 /*   By: kel-malt <kel-malt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 13:58:11 by kel-malt          #+#    #+#             */
-/*   Updated: 2024/03/20 13:33:44 by kel-malt         ###   ########.fr       */
+/*   Updated: 2024/03/24 18:20:33 by kel-malt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,25 @@ void	putarg(const char arg_type, va_list args, int *len)
 	else if (arg_type == 'u')
 		ft_put_unsignedint(va_arg(args, unsigned int), len);
 	else if (arg_type == 'x')
-		ft_put_hex_lower(va_arg(args, unsigned int), len);
+		ft_put_hex_lower(va_arg(args, unsigned long), len);
 	else if (arg_type == 'X')
-		ft_put_hex_upper(va_arg(args, unsigned int), len);
+		ft_put_hex_upper(va_arg(args, unsigned long), len);
 	else if (arg_type == '%')
 		ft_put_char('%', len);
-	else
-		ft_putstr_fd("conversion not supported", 1);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int		i;
+	size_t	i;
 	int		len;
-	int		format_len;
 
-	format_len = ft_strlen(format);
+	if (!format)
+		return (-1);
 	va_start(args, format);
 	i = 0;
 	len = 0;
-	while (i < format_len)
+	while (i < ft_strlen(format))
 	{
 		if (format[i] != '%')
 		{
