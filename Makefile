@@ -6,7 +6,7 @@
 #    By: kel-malt <kel-malt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/19 12:31:43 by kel-malt          #+#    #+#              #
-#    Updated: 2024/03/24 17:58:56 by kel-malt         ###   ########.fr        #
+#    Updated: 2024/03/25 12:04:32 by kel-malt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,6 @@ OBJS = $(SRCS:.c=.o) $(FUNCTIONS:.c=.o)
 $(NAME): $(OBJS)
 	$(MAKE) bonus -C ./libft
 	cp libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(INCLUDES) $(SRCS) $(FUNCTIONS)
 	ar -rcs $(NAME) $(OBJS)
 
 all : $(NAME)
